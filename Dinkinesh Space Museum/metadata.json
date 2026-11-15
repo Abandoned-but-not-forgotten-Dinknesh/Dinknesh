@@ -1,0 +1,8 @@
+{
+  "name": "ድንቅነሽ Museum",
+  "description": "An enthusiastic interactive space \u0026 invention museum guided by Lucy the squirrel astronaut, exploring Moon and Mars spacecraft artifacts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

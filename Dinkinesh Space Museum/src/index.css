@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fredoka', 'Noto Sans Ethiopic', sans-serif;
+    --font-editorial: 'Fraunces', 'Noto Sans Ethiopic', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFBF2;
+    color: #1E255E;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Kids-animation keyframes */
+@keyframes lucy-wave {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(32deg);
+  }
+}
+
+@keyframes lucy-bob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes lucy-tail-wag {
+  0%, 100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes lucy-walk-leg-left {
+  0%, 100% {
+    transform: rotate(-18deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes lucy-walk-leg-right {
+  0%, 100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-18deg);
+  }
+}
+
+@keyframes lucy-walk-bounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+}
+
+@keyframes planet-roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes planet-face-wobble {
+  0%, 100% {
+    transform: translateY(0px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes twinkle-star {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes hotspot-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.32);
+    opacity: 0.3;
+  }
+}
+
+.animate-lucy-wave {
+  transform-origin: 76px 76px;
+  animation: lucy-wave 0.75s ease-in-out infinite;
+}
+
+.animate-lucy-bob {
+  animation: lucy-bob 2.2s ease-in-out infinite;
+}
+
+.animate-lucy-tail {
+  transform-origin: 42px 92px;
+  animation: lucy-tail-wag 1.6s ease-in-out infinite;
+}
+
+.animate-lucy-walk-bounce {
+  animation: lucy-walk-bounce 0.55s ease-in-out infinite;
+}
+
+.animate-lucy-leg-left {
+  transform-origin: 49px 104px;
+  animation: lucy-walk-leg-left 0.55s ease-in-out infinite;
+}
+
+.animate-lucy-leg-right {
+  transform-origin: 65px 104px;
+  animation: lucy-walk-leg-right 0.55s ease-in-out infinite;
+}
+
+.animate-planet-roll {
+  transform-origin: center;
+  animation: planet-roll 11s linear infinite;
+}
+
+.animate-planet-face-wobble {
+  transform-origin: center;
+  animation: planet-face-wobble 2.6s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4.5s ease-in-out infinite;
+}
+
+.animate-hotspot-pulse {
+  animation: hotspot-pulse 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-lucy-wave,
+  .animate-lucy-bob,
+  .animate-lucy-tail,
+  .animate-lucy-walk-bounce,
+  .animate-lucy-leg-left,
+  .animate-lucy-leg-right,
+  .animate-planet-roll,
+  .animate-planet-face-wobble,
+  .animate-float-gentle,
+  .animate-hotspot-pulse {
+    animation: none !important;
+  }
+}
